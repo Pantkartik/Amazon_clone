@@ -1,0 +1,320 @@
+
+* {
+    margin: 0;
+    font-family: Arial;
+    box-sizing: border-box;
+}
+
+/* Navbar */
+.nav-bar {
+    height: 60px;
+    background-color: #0f1111;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.nav-logo {
+    height: 50px;
+    width: 100px;
+}
+
+.logo {
+    background-image: url("amazon_logo.png");
+    background-size: cover;
+    height: 50px;
+    width: 100%;
+}
+
+.border {
+    border: 1.5px solid transparent;
+}
+
+.border:hover {
+    border: 1.5px solid white;
+}
+
+/* Address Section */
+.add-first {
+    color: #cccccc;
+    font-size: 0.5rem;
+    margin-left: 15px;
+}
+
+.add-second {
+    font-size: 1rem;
+    margin-left: 3px;
+}
+
+.add-icon {
+    display: flex;
+    align-items: center;
+}
+
+/* Search Section */
+.nav-search {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: pink;
+    width: 620px;
+    height: 40px;
+    border-radius: 4px;
+}
+
+.search-select {
+    background-color: #f3f3f3;
+    width: 50px;
+    text-align: center;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border: none;
+}
+
+.search-input {
+    width: 100%;
+    font-size: 1rem;
+    border: none;
+}
+
+.search-icon {
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+    background-color: #febd68;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    color: #0f1111;
+}
+
+.nav-search:hover {
+    border: 2px solid orange;
+}
+
+/* Account/Order Section */
+span {
+    font-size: 0.7rem;
+}
+
+.nav-second {
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+/* Cart Section */
+.nav-cart i {
+    font-size: 30px;
+}
+
+.nav-cart {
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+/* Panel */
+.panel {
+    height: 40px;
+    background-color: #222f3d;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: space-between; /* Ensure items are spread out */
+}
+
+.panel-option {
+    display: flex;
+    justify-content: space-evenly; /* Align panel items in a row */
+    flex-grow: 1; /* Allow it to take available space */
+}
+
+.panel-item {
+    position: relative; /* Needed for positioning the popup */
+    padding: 0 10px;
+    cursor: pointer; /* Show pointer cursor on hover */
+}
+
+.panel-popup {
+    display: none;
+    position: absolute;
+    background-color: #222f3d;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    top: 40px;
+    left: 0;
+    z-index: 100;
+    width: 180px; /* Adjust this as necessary */
+}
+
+.panel-item:hover .panel-popup {
+    display: block;
+}
+
+/* Hero Section */
+.hero-section {
+    background-image: url(img_1.jpg);
+    background-size: cover;
+    height: 380px;
+}
+
+.hero-message {
+    background-color: white;
+    color: black;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+/* Shop Section */
+.shop-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Adjusts the boxes' alignment */
+    gap: 20px; /* Adds space between each box */
+    background-color: #e2e7e6;
+    padding: 20px;
+}
+
+.box {
+    background-color: white;
+    padding: 20px 0 15px;
+    height: 400px;
+    width: calc(25% - 20px); /* Adjust width to ensure boxes fit within the container */
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #ddd; /* Optional border for each box */
+}
+
+.box-img {
+    height: 300px;
+    background-size: cover;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.box-content {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.box-content p {
+    color: #007185;
+}
+
+
+@media (max-width: 768px) {
+    .box {
+        width: calc(50% - 20px); /* On smaller screens, each box takes up 50% of the container width */
+    }
+}
+
+@media (max-width: 480px) {
+    .box {
+        width: 100%; /* On very small screens, each box takes up 100% of the container width */
+    }
+
+    .nav-search {
+        width: 100%; /* Adjust search bar for small screens */
+    }
+}
+
+/* Footer Section */
+footer {
+    background-color: #131a22; /* Dark background similar to Amazon's footer */
+    color: white;
+    padding: 40px 0;
+    font-size: 0.875rem;
+    margin-top: 50px; /* Ensures footer is separated from the content above */
+}
+
+.footer-content {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    margin: 0 15px;
+    min-width: 200px;
+}
+
+.footer-column h4 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer-credit {
+    margin-top: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.footer-credit p {
+    color: #ccc;
+    margin: 0;
+}
+
+.footer-credit p a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-credit p a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Social Media Section */
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+    transform: scale(1.2); /* Slight zoom effect when hovering over the icons */
+}
